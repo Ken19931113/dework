@@ -1,13 +1,22 @@
 #!/bin/bash
 
-echo "刪除 node_modules 目錄和 package-lock.json..."
+# Remove all node_modules folders
 rm -rf node_modules
-rm -f package-lock.json
+rm -rf packages/*/node_modules
+rm -rf pnpm-lock.yaml
 
-echo "安裝依賴項..."
-npm install --legacy-peer-deps
+# Reinstall all dependencies
+pnpm install
 
-echo "編譯合約..."
-npx hardhat compile
+# Install Python dependencies
+cd packages/backend
+pip install -r requirements.txt
+cd ../..
 
-echo "安裝完成!"
+chmod +x ./ensure-permissions.sh
+./ensure-permissions.sh
+
+echo "Compiling contracts..."
+pnpm contracts compile
+
+echo "Installation complete!"

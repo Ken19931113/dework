@@ -2,12 +2,25 @@
   "name": "dework",
   "version": "1.0.0",
   "description": "Web3押金代管平台",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "test": "hardhat test",
     "compile": "hardhat compile",
     "deploy": "hardhat run scripts/deploy.js",
     "deploy:local": "hardhat run scripts/deploy.js --network localhost",
-    "node": "hardhat node"
+    "node": "hardhat node",
+    "frontend": "pnpm --filter @dework/frontend",
+    "backend": "pnpm --filter @dework/backend",
+    "contracts": "pnpm --filter @dework/contracts",
+    "dev:frontend": "pnpm frontend dev",
+    "dev:backend": "pnpm backend dev",
+    "dev:contracts": "pnpm contracts node",
+    "dev": "pnpm -r --workspace-concurrency=Infinity run --if-present dev",
+    "build": "pnpm -r --workspace-concurrency=Infinity run --if-present build",
+    "test:all": "pnpm -r --workspace-concurrency=Infinity run --if-present test"
   },
   "dependencies": {
     "@openzeppelin/contracts": "4.9.3",

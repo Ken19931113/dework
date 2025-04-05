@@ -107,3 +107,18 @@ privatekeys.txt
 # 自定義部署脚本
 deploy-script.js
 deploy-config.json
+
+# Monorepo specific
+.turbo
+.DS_Store
+
+# NVM
+.nvmrc
+
+# Yarn 
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

@@ -1,3 +1,75 @@
+# Dework Monorepo
+
+This project is set up as a monorepo using pnpm workspaces. The monorepo contains the following packages:
+
+- `packages/frontend`: React-based frontend application
+- `packages/backend`: FastAPI-based backend service
+- `packages/contracts`: Smart contracts and Hardhat configuration
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or later)
+- pnpm (v7 or later)
+- Python (v3.9 or later)
+- Hardhat
+
+### Installation
+
+1. Install dependencies:
+
+```bash
+pnpm install
+```
+
+2. Set up environment variables:
+
+```bash
+# Copy and configure environment files
+cp .env.example .env
+```
+
+### Development
+
+You can use the following commands to work with the different packages:
+
+#### Frontend
+
+```bash
+# Run dev server
+pnpm frontend dev
+
+# Build for production
+pnpm frontend build
+```
+
+#### Backend
+
+```bash
+# Run dev server
+pnpm backend dev
+
+# Run tests
+pnpm backend test
+```
+
+#### Contracts
+
+```bash
+# Compile contracts
+pnpm contracts compile
+
+# Run tests
+pnpm contracts test
+
+# Start local Hardhat node
+pnpm contracts node
+
+# Deploy contracts
+pnpm contracts deploy
+```
+
 # DeWork - Web3押金代管平台
 
 透過智能合約與DeFi利率市場管理商業空間租賃押金，提供租客保障、房東獲益和平台穩定收入。

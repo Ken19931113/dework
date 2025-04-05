@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# 為所有腳本添加執行權限
-chmod +x fix-environment.sh
-chmod +x startup.sh
-chmod +x reinstall.sh
-if [ -f install.sh ]; then
-    chmod +x install.sh
-fi
+# Make shell scripts executable
+chmod +x *.sh
 
-echo "已為所有腳本添加執行權限"
+# Make scripts in all packages executable
+find packages -name "*.sh" -type f -exec chmod +x {} \;
+
+echo "All shell scripts are now executable."
