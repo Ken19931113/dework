@@ -1,0 +1,109 @@
+# 節點依賴
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.env
+backend/.env
+.venv
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Hardhat/區塊鏈
+cache/
+artifacts/
+typechain/
+typechain-types/
+coverage/
+coverage.json
+.openzeppelin/
+hardhat.config.local.js
+
+# 部署相關
+deploy/deployment-*.json
+flattenedContracts/
+.deployments/
+
+# IDE 和編輯器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 操作系統
+.DS_Store
+Thumbs.db
+
+# 前端構建
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/coverage/
+frontend/.next/
+
+# 後端
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/logs/
+backend/data/
+backend/.coverage
+backend/coverage/
+
+# 日誌
+logs/
+*.log
+npm-debug.log*
+
+# 本地配置
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 其他
+.secret
+.secret.json
+.deployed-addresses.json
+
+# 自動生成的腳本相關
+*.sh.log
+
+# 自動生成的合約
+auto-generated/
+
+# Solidity 構建文件
+.solc-input-*.json
+
+# 令牌化簽名
+mnemonic.txt
+privatekeys.txt
+
+# 不要忽略我們的腳本
+!fix-environment.sh
+!startup.sh
+!ensure-permissions.sh
+!reinstall.sh
+
+# 自定義部署脚本
+deploy-script.js
+deploy-config.json
